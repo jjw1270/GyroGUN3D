@@ -30,7 +30,7 @@ public class LevelCtrl : MonoBehaviour
 
     void Start()
     {
-        enemySpawnLevel(9, 4.0f, 6.0f, 5.0f, 7.0f);
+        enemySpawnLevel(2, 4.0f, 6.0f, 5.0f, 7.0f);
         enemyDamageLevel(15, 8);
         itemLevel(15.0f, 30.0f);
         moveStopLevel(30f, 60f, 3.0f, 5.0f);
@@ -51,7 +51,7 @@ public class LevelCtrl : MonoBehaviour
         }
         if(Mathf.RoundToInt(timer) == 90)
         {
-            enemySpawnLevel(3, 3.0f, 5.0f, 4.0f, 6.0f);
+            enemySpawnLevel(4, 3.0f, 5.0f, 4.0f, 6.0f);
             moveStopLevel(50f, 100f, 2.0f, 4.0f);
         }
         if(Mathf.RoundToInt(timer) == 120)
@@ -61,22 +61,22 @@ public class LevelCtrl : MonoBehaviour
         }
         if(Mathf.RoundToInt(timer) == 150)
         {
-            enemySpawnLevel(4, 4.0f, 6.0f, 4.0f, 6.0f);
+            enemySpawnLevel(5, 4.0f, 6.0f, 4.0f, 6.0f);
             itemLevel(10.0f, 20.0f);
         }
         if(Mathf.RoundToInt(timer) == 180)
         {
-            enemySpawnLevel(4, 3.0f, 5.0f, 4.0f, 5.0f);
+            enemySpawnLevel(5, 3.0f, 5.0f, 4.0f, 5.0f);
             enemyDamageLevel(40, 20);
             moveStopLevel(100f, 150f, 0.5f, 2.0f);
         }
         if(Mathf.RoundToInt(timer) == 210)
         {
-            enemySpawnLevel(5, 3.0f, 5.0f, 4.0f, 6.0f);
+            enemySpawnLevel(6, 3.0f, 5.0f, 4.0f, 6.0f);
         }
         if(Mathf.RoundToInt(timer) == 240)
         {
-            enemySpawnLevel(5, 2.0f, 4.0f, 3.0f, 5.0f);
+            enemySpawnLevel(7, 2.0f, 4.0f, 3.0f, 5.0f);
         }
         if(Mathf.RoundToInt(timer) > 270)
         {
