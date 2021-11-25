@@ -19,6 +19,13 @@ public class GameOver : MonoBehaviour
 
     private Color color;
 
+    private void Start()
+    {
+        timer = 0f;
+        score = 0;
+    }
+
+
     void Update()
     {
         timer += Time.deltaTime;

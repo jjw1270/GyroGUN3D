@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +17,20 @@ public class ButtonCtrl : MonoBehaviour
         gameObject.GetComponent<AudioSource>().Play();
         StartCoroutine(delayTime());
         //Debug.Log("PlayGame");
+    }
+    void serialBtn()
+    {
+        if (Serial.serial.isConnected())
+        {
+            Serial.serial.OnDataReceived += () =>
+            {
+                String read = Serial.serial.Read();
+                if (read == "F")
+                    playGame();
+            };
+        }
+        //else;
+        //Serial.serial.Connect();
     }
 
     public void endGame()
