@@ -18,7 +18,7 @@ public class ButtonCtrl : MonoBehaviour
         StartCoroutine(delayTime());
         //Debug.Log("PlayGame");
     }
-    void serialBtn()
+    /*void serialBtn()
     {
         if (Serial.serial.isConnected())
         {
@@ -31,7 +31,7 @@ public class ButtonCtrl : MonoBehaviour
         }
         //else;
         //Serial.serial.Connect();
-    }
+    }*/
 
     public void endGame()
     {
