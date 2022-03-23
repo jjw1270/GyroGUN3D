@@ -19,7 +19,7 @@ public class Player_ctrl : MonoBehaviour
     {
         Input.gyro.enabled = true;
         lastTouchTime = Time.time;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));  //È­¸é ÃÊ±âÈ­
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));  //È­ï¿½ï¿½ ï¿½Ê±ï¿½È­
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class Player_ctrl : MonoBehaviour
         transform.Rotate(angleGyro.x, angleGyro.y, 0);
 
         /*
-        // xÃà Á¦ÇÑ
+        // xï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (transform.rotation.eulerAngles.x < -90.0f)
         {
             Vector3 TunnelRotation = transform.rotation.eulerAngles;
@@ -47,7 +47,7 @@ public class Player_ctrl : MonoBehaviour
             transform.rotation = Quaternion.Euler(TunnelRotation);
         }
 
-        // yÃà - 50 ~ 50 Á¦ÇÑ
+        // yï¿½ï¿½ - 50 ~ 50 ï¿½ï¿½ï¿½ï¿½
         if (transform.rotation.eulerAngles.y < -50.0f)
         {
             Vector3 TunnelRotation = transform.rotation.eulerAngles;
@@ -67,17 +67,17 @@ public class Player_ctrl : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             switch (touch.phase)
             {
-                case TouchPhase.Began: //¼Õ°¡¶ôÀÌ È­¸éÀ» ÅÍÄ¡ÇÏ´Â ¼ø°£
-                    if (Time.time - lastTouchTime < doubleTouchDelay) //´õºíÅÍÄ¡ ÆÇÁ¤
+                case TouchPhase.Began: //ï¿½Õ°ï¿½ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½
+                    if (Time.time - lastTouchTime < doubleTouchDelay) //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½
                     {
-                        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));  //È­¸é ÃÊ±âÈ­
+                        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));  //È­ï¿½ï¿½ ï¿½Ê±ï¿½È­
                     }
                     break;
 
-                case TouchPhase.Moved:   //¼Õ°¡¶ôÀÌ È­¸é À§¿¡¼­ ÅÍÄ¡ÇÑ »óÅÂ·Î ÀÌµ¿ÇÏ°í ÀÖ´Â »óÅÂ
+                case TouchPhase.Moved:   //ï¿½Õ°ï¿½ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ ï¿½Ìµï¿½ï¿½Ï°ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½
                     break;
 
-                case TouchPhase.Ended:   //¼Õ°¡¶ôÀÌ È­¸é¿¡¼­ ¶³¾îÁø ¼ø°£
+                case TouchPhase.Ended:   //ï¿½Õ°ï¿½ï¿½ï¿½ï¿½ï¿½ È­ï¿½é¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                     lastTouchTime = Time.time;
                     break;
             }
@@ -85,7 +85,7 @@ public class Player_ctrl : MonoBehaviour
 
         if (clearCam)
         {
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));  //È­¸é ÃÊ±âÈ­
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));  //È­ï¿½ï¿½ ï¿½Ê±ï¿½È­
             clearCam = false;
         }
     }
