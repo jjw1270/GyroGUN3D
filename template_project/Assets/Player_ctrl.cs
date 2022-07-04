@@ -19,7 +19,7 @@ public class Player_ctrl : MonoBehaviour
     {
         Input.gyro.enabled = true;
         lastTouchTime = Time.time;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));  //ȭ�� �ʱ�ȭ
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));  //??? ????
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class Player_ctrl : MonoBehaviour
         transform.Rotate(angleGyro.x, angleGyro.y, 0);
 
         /*
-        // x�� ����
+        // x?? ????
         if (transform.rotation.eulerAngles.x < -90.0f)
         {
             Vector3 TunnelRotation = transform.rotation.eulerAngles;
@@ -47,7 +47,7 @@ public class Player_ctrl : MonoBehaviour
             transform.rotation = Quaternion.Euler(TunnelRotation);
         }
 
-        // y�� - 50 ~ 50 ����
+        // y?? - 50 ~ 50 ????
         if (transform.rotation.eulerAngles.y < -50.0f)
         {
             Vector3 TunnelRotation = transform.rotation.eulerAngles;
@@ -67,17 +67,17 @@ public class Player_ctrl : MonoBehaviour
             Touch touch = Input.GetTouch(0);
             switch (touch.phase)
             {
-                case TouchPhase.Began: //�հ����� ȭ���� ��ġ�ϴ� ����
-                    if (Time.time - lastTouchTime < doubleTouchDelay) //������ġ ����
+                case TouchPhase.Began: //??????? ????? ?????? ????
+                    if (Time.time - lastTouchTime < doubleTouchDelay) //??????? ????
                     {
-                        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));  //ȭ�� �ʱ�ȭ
+                        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));  //??? ????
                     }
                     break;
 
-                case TouchPhase.Moved:   //�հ����� ȭ�� ������ ��ġ�� ���·� �̵��ϰ� �ִ� ����
+                case TouchPhase.Moved:   //??????? ??? ?????? ????? ???��? ?????? ??? ????
                     break;
 
-                case TouchPhase.Ended:   //�հ����� ȭ�鿡�� ������ ����
+                case TouchPhase.Ended:   //??????? ????? ?????? ????
                     lastTouchTime = Time.time;
                     break;
             }
@@ -85,7 +85,7 @@ public class Player_ctrl : MonoBehaviour
 
         if (clearCam)
         {
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));  //ȭ�� �ʱ�ȭ
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));  //??? ????
             clearCam = false;
         }
     }
